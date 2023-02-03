@@ -1,0 +1,55 @@
+{
+  "levels": [
+
+    {
+      "name": "Level 1",
+      "meter_initial_value": 0,
+      "meter_filling_speed": 1,
+      "symbols": [
+        "W",
+        "A",
+        "S",
+        "D"
+      ],
+      "sequences_size": [
+        2,
+        2,
+        3
+      ]
+    },
+
+    {
+      "name": "Level 2",
+      "meter_initial_value": 0,
+      "meter_filling_speed": 1,
+      "symbols": [
+        "W",
+        "A",
+        "S",
+        "D"
+      ],
+      "sequences_size": [
+        3,
+        4,
+        3
+      ]
+    },
+
+    {
+      "name": "Level 3",
+      "meter_initial_value": 0,
+      "meter_filling_speed": 1,
+      "symbols": [
+        "W",
+        "A",
+        "S",
+        "D"
+      ],
+      "sequences_size": [
+        5,
+        5,
+        5
+      ]
+    }
+  ]
+}
