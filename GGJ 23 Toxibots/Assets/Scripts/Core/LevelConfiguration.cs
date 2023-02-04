@@ -2,6 +2,7 @@
 
 namespace Assets.Scripts
 {
+	[Serializable]
 	public class LevelConfiguration
 	{
 		/// <summary>
@@ -20,9 +21,19 @@ namespace Assets.Scripts
 		public Int32 meter_filling_speed;
 
 		/// <summary>
+		/// 
+		/// </summary>
+		public float symbol_presentation_step_duration;
+
+		/// <summary>
+		/// 
+		/// </summary>
+		public float wrong_symbol_signal_meter_penalty;
+
+		/// <summary>
 		/// List of available symbols in this level.
 		/// </summary>
-		public Char[] symbols;
+		public String[] symbols;
 
 		/// <summary>
 		/// The number of sequences and their sizes.
