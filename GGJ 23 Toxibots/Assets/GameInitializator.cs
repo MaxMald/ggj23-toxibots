@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameInitializator : MonoBehaviour
 {
 	// Start is called before the first frame update
-	void Start()
+	void Awake()
 	{
 		GameManager.START();
 	}
@@ -12,6 +12,6 @@ public class GameInitializator : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
+		GameManager.GetInstance().OnUpdate(Time.deltaTime);
 	}
 }

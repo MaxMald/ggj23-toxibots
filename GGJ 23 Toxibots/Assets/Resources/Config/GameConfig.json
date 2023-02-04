@@ -11,6 +11,8 @@
         "S",
         "D"
       ],
+      "symbol_presentation_step_duration": 1,
+      "wrong_symbol_signal_meter_penalty" : 10,
       "sequences_size": [
         2,
         2,
@@ -22,6 +24,8 @@
       "name": "Level 2",
       "meter_initial_value": 0,
       "meter_filling_speed": 1,
+      "symbol_presentation_step_duration": 1,
+      "wrong_symbol_signal_meter_penalty" : 10,
       "symbols": [
         "W",
         "A",
@@ -39,6 +43,8 @@
       "name": "Level 3",
       "meter_initial_value": 0,
       "meter_filling_speed": 1,
+      "symbol_presentation_step_duration": 1,
+      "wrong_symbol_signal_meter_penalty" : 10,
       "symbols": [
         "W",
         "A",
