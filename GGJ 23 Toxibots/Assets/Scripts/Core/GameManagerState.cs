@@ -9,11 +9,12 @@ namespace Assets.Scripts
 	public enum GameManagerState
 	{
 		kIdle,
-		kInitNextLevel,
+		kInitNextLevel,		
 		kStartLevel,
 		kUpdateLevel,
 		kEvaluateLevels,
 		kGameCompleted,
-		kGameFailure
+		kGameFailure,
+		kInDelayedTranstion,
 	}
 }
