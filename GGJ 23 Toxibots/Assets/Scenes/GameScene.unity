@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4832844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4832846}
+  - component: {fileID: 4832845}
+  m_Layer: 0
+  m_Name: AmbienceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4832845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b1dc54138f3bb459fc1aaddadaa0c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TrunkMat_01: {fileID: 2100000, guid: b44f4bec24574734889bfd445624b66f, type: 2}
+  _TrunkMat_02: {fileID: 2100000, guid: b44f4bec24574734889bfd445624b66f, type: 2}
+  _Foliage_01: {fileID: 2100000, guid: f584f5f9e4d48d5499b6764c61c78af7, type: 2}
+  _Foliage_02: {fileID: 2100000, guid: 0cb644e408283204f918bf847640b9c3, type: 2}
+  _Foliage_03: {fileID: 2100000, guid: 46629ebca3127d24da2acac73d546c39, type: 2}
+  _Floor: {fileID: 515732474}
+--- !u!4 &4832846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -59.896145, y: -74.29253, z: 142.64423}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &23727290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,7 +4291,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.20304812, g: 0.4745098, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

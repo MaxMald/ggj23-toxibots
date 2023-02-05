@@ -84,9 +84,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.31736577, g: 0.4056604, b: 0, a: 1}
+    - _Color: {r: 0.45490196, g: 0.5372549, b: 0.15294118, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel_Color: {r: 0.282039, g: 0.3867925, b: 0.06020827, a: 0}
+    - _Fresnel_Color: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &754223762794980946
 MonoBehaviour:

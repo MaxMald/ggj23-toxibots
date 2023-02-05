@@ -5,7 +5,7 @@
     {
       "name": "Level 1",
       "meter_initial_value": 0,
-      "meter_filling_speed": 1,
+      "meter_filling_speed": 3,
       "symbols": [
         "W",
         "A",

@@ -56,6 +56,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d89f912f73334934b5cdd71f28548ec1_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 99607ebb7ee0a8444962d87d22e3acd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -65,6 +69,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EffectBlend: 1
+    - _Float: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -72,6 +77,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -80,6 +86,7 @@ Material:
     m_Colors:
     - _Color: {r: 0.63491434, g: 0.9245283, b: 0.11774653, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Fresnel_Color: {r: 0.282039, g: 0.3867925, b: 0.06020827, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4049997197516760555
 MonoBehaviour:
