@@ -5,9 +5,6 @@ using UnityEngine;
 public class GameConsoleView : MonoBehaviour
 {
 	[SerializeField]
-	MeterTextView meterTextView;
-
-	[SerializeField]
 	bool logGameManager = true;
 
 	[SerializeField]
@@ -27,8 +24,6 @@ public class GameConsoleView : MonoBehaviour
 		gameManager.LevelManager.Subscribe(new LevelManagerConsoleView(logLevelManager));
 		gameManager.LevelManager.SymbolsBoard.Subscribe(new SymbolsBoardManagerConsoleView(logSymbolsBoardManager));
 		gameManager.LevelManager.SymbolSignalManager.Subscribe(new SymbolSignalManagerConsoleView(logSymbolSignalManager));
-		gameManager.LevelManager.Meter.Subscribe(meterTextView);
-		gameManager.StartGame();
     }
 
     // Update is called once per frame

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 namespace Assets.Scripts
 {
@@ -43,9 +44,21 @@ namespace Assets.Scripts
 		private List<IGameManagerListener> _Subscribers;
 
 		/// <summary>
+		/// GameManagerMono
+		/// </summary>
+		private MonoBehaviour _GameManagerMono;
+
+		/// <summary>
 		/// Level Manager instance.
 		/// </summary>
 		public LevelManager LevelManager => _LevelManager;
+
+		/// <summary>
+		/// Indicates if the Game is running.
+		/// </summary>
+		public Boolean IsRunning => _State != GameManagerState.kIdle;
+
+		public MonoBehaviour Mono => _GameManagerMono;
 
 		/// <summary>
 		/// Initializes the GameManager.
@@ -90,6 +103,11 @@ namespace Assets.Scripts
 			_LevelsConfigurationBag = new Queue<LevelConfiguration>();
 			_State = GameManagerState.kIdle;
 			_Subscribers = new List<IGameManagerListener>();
+		}
+
+		public void SetMonobehaviour(MonoBehaviour mono)
+		{
+			_GameManagerMono = mono;
 		}
 
 		/// <summary>
@@ -194,7 +212,12 @@ namespace Assets.Scripts
 				listener.OnGameLevelChanged(nextLevel.name);
 			}
 
-			SetState(GameManagerState.kStartLevel);
+			_GameManagerMono.StartCoroutine(
+				DelayedStateTranstion(
+					_GameConfiguration.level_presentation_duration, 
+					GameManagerState.kStartLevel
+				)
+			);
 		}
 
 		private void OnUpdate_StartLevel()
@@ -256,6 +279,13 @@ namespace Assets.Scripts
 		{
 			_LevelsConfigurationBag = new Queue<LevelConfiguration>(_GameConfiguration.levels);
 			SetState(GameManagerState.kIdle);
+		}
+
+		private IEnumerator DelayedStateTranstion(float seconds, GameManagerState toState)
+		{
+			SetState(GameManagerState.kInDelayedTranstion);
+			yield return new WaitForSeconds(seconds);
+			SetState(toState);
 		}
 	}
 }
