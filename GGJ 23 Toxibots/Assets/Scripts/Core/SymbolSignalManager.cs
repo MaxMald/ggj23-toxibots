@@ -52,6 +52,14 @@ namespace Assets.Scripts
 			{
 				SymbolReceived('D');
 			}
+			if (Input.GetKeyDown(KeyCode.Q))
+			{
+				SymbolReceived('Q');
+			}
+			if (Input.GetKeyDown(KeyCode.E))
+			{
+				SymbolReceived('E');
+			}
 		}
 
 		public void Subscribe(ISymbolSignalManagerListener listener)
