@@ -10,12 +10,12 @@ public class BigMessageView : MonoBehaviour, IGameManagerListener, ILevelManager
 
 	public void OnGameCompleted()
 	{
-		_MessageText.text = "¡CONGRATULATIONS!";
+		_MessageText.text = "¡You saved the forest, you are a winner!";
 	}
 
 	public void OnGameFailed()
 	{
-		_MessageText.text = "¡YOU SUCK!";
+		_MessageText.text = "¡The forest is dead because of you!";
 	}
 
 	public void OnGameLevelChanged(string levelName)
