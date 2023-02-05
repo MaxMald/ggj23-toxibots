@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class SoundManagerView : MonoBehaviour, IGameManagerListener, ILevelManagerListener, ISymbolsBoardListener, ISymbolSignalManagerListener
 {
+	public AudioSource source;
+	public AudioClip successSymbolSound, failSymbolSound;
+	public float volume=0.5f;
+
 	public void OnGameCompleted()
 	{ }
 
 	public void OnGameFailed()
 	{ }
 
+	//No
 	public void OnGameLevelChanged(string levelName)
 	{}
 
+	//No
 	public void OnGameManagerStateChanged(GameManagerState newState)
 	{}
 
+	//No
 	public void OnGameReset()
 	{}
 
@@ -32,11 +39,13 @@ public class SoundManagerView : MonoBehaviour, IGameManagerListener, ILevelManag
 		 
 	}
 
+	//TODO if lives are created no sound 
 	public void OnLevelFail(string levelName)
 	{
 		 
 	}
 
+	//No
 	public void OnLevelManagerStateChanged(LevelState state)
 	{
 		 
@@ -47,6 +56,7 @@ public class SoundManagerView : MonoBehaviour, IGameManagerListener, ILevelManag
 		 
 	}
 
+	//No
 	public void OnLevelReset(string levelName)
 	{
 		 
@@ -57,6 +67,7 @@ public class SoundManagerView : MonoBehaviour, IGameManagerListener, ILevelManag
 		 
 	}
 
+	//No
 	public void OnLevelSequenceCompleted(string levelName)
 	{
 		 
@@ -67,31 +78,42 @@ public class SoundManagerView : MonoBehaviour, IGameManagerListener, ILevelManag
 		 
 	}
 
+	//Maybe
 	public void OnSymbolBoardCleared()
 	{
 		 
 	}
 
+	//Cuando aparece en pantalla.
 	public void OnSymbolPresented(Symbol newSymbol, List<Symbol> visibleSymbols)
 	{
 		 
 	}
 
+	//Maybe
 	public void OnSymbolsBoardSequenceCompleted()
 	{
 		 
 	}
 
+	//No
 	public void OnSymbolSignalManagerInit(List<Symbol> expectedSymbols)
 	{
 		 
 	}
 
+	//Este es cuando se envia un sonido y te dice 
 	public void OnSymbolSignalReceived(SymbolResponse response)
 	{
-		 
+		if(response.IsCorrect)
+		{
+			source.PlayOneShot(successSymbolSound, volume);
+		}else{
+			source.PlayOneShot(failSymbolSound, volume);
+		}
 	}
 
+	//No
 	public void OnSymbolSingalManagerClear()
 	{
 		 
